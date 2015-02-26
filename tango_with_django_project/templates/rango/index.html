@@ -1,0 +1,40 @@
+{% extends 'rango/base.html' %}
+{% block title %} Register {% endblock %}
+{% block body_block %}
+<div class="hero-unit">
+	<h1> Ready to Rango </h1>
+	<p> Find, Add, share and Rango useful links and resources</P>
+</div>
+
+<div class="row-fluid">
+	
+	<div class="span6">
+		<h2> Top Five Pages</h2>
+			{% if pages %}
+			<ul>
+				{% for page in pages %}
+				<li><a href="{{ page.url}}">{{ page.title }}</a></li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<strong> NO PAGES </strong>
+		{% endif %}
+	</div>		
+			
+
+		<!--
+		{% if user.is_authenticated %}
+		<a href="/rango/restricted/">Restricted Page</a><br />
+		<a href="/rango/logout/">Logout</a><br />
+		{% else %}
+		<a href="/rango/register/"> Register Here</a><br />
+		<a href="/rango/login"> Login</a><br />
+		{% endif %}
+		
+		<a href="/rango/about/">About</a><br />
+		<a href="/rango/add_category/"> Add a New category</a><br />
+		-->
+</div>
+{% endblock %}
+
+
