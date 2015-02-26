@@ -14,7 +14,7 @@ from django.contrib.auth import logout
 from datetime import datetime
 from rango.bing_search import run_query
 from django.contrib.auth.models import User
-
+#added a comment
 @login_required
 def user_logout(request):
 	logout(request)
